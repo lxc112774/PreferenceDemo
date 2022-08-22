@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <CheckBoxPreference
+        android:key="checkbox"
+        android:title="CheckBoxPreference"
+        android:summary="check it box" />
+
+
+    <!--showDefault="true"对话框出现默认铃声选项；showSilent="true"对话框出现无选项-->
+    <RingtonePreference
+        android:key="ring"
+        android:title="ringtone"
+        android:showDefault="true"
+
+        android:showSilent="true"
+        android:ringtoneType="notification"
+        android:summary="check a ringtone" />
+
+    <!--preferenceScreen简单的说就是所有Preference元素的根节点，我们可以看做是每一个PrederenceActivity布局的开始元素，
+    当然这个PreferenceScreen也可以作为一个组件出现，里面可以嵌套其它组件，那么这个将会以另外的一屏显示出来，就是当我们点击后出现一个新的屏幕-->
+    <PreferenceScreen
+        android:key="screen"
+        android:title="PreferenceScreen"
+        android:summary="screen it">
+        <SwitchPreference
+            android:key="switch"
+            android:title="switchPreference"
+            android:enabled="false"
+            android:summary="switch it" />
+        <EditTextPreference
+            android:key="edit"
+            android:title="editPreference"
+            android:summary="OK" />
+    </PreferenceScreen>
+
+
+    <!--PreferenceCategory　这个控件类似于LinearLayou、RelativeLayout，用于组合一组Preference，使布局看起来具有层次关系，美观-->
+    <PreferenceCategory
+        android:key="category"
+        android:title="编辑">
+        <EditTextPreference
+            android:key="edit"
+            android:title="category"
+            android:summary="OK" />
+        <!--默认android:defaultValues＝“１”就是对应第二个"check"-->
+        <ListPreference
+            android:key="list"
+            android:title="Options"
+            android:entries="@array/entry_list"
+            android:entryValues="@array/values_list"
+            android:dialogTitle="list dialogtitle"
+            android:defaultValue="1" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

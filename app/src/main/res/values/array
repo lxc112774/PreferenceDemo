@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="department">
+        <item>IT</item>
+        <item>Commerce</item>
+        <item>HR</item>
+    </string-array>
+    <string-array name="department_value">
+        <item>001</item>
+        <item>002</item>
+        <item>003</item>
+    </string-array>
+
+
+    <string-array name="entry_list">
+        <item>total</item>
+        <item>check</item>
+        <item>airplace</item>
+    </string-array>
+    <string-array name="values_list">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+</resources>
